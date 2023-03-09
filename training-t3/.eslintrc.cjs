@@ -5,7 +5,7 @@ const config = {
       extends: [
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
       ],
-      files: ['*.ts', '*.tsx'],
+      files: ['*.ts', '*.tsx', 'stories.@(ts|tsx|js|jsx|mjs|cjs)'],
       parserOptions: {
         project: 'tsconfig.json',
       },
