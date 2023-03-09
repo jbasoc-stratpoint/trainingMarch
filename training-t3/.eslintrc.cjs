@@ -9,11 +9,16 @@ const config = {
       parserOptions: {
         project: 'tsconfig.json',
       },
+      rules: {
+        '@typescript-eslint/await-thenable': 'off',
+      },
     },
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: './tsconfig.json',
+    project: 'tsconfig.json',
+    tsconfigRootDir: __dirname,
+    sourceType: 'module',
   },
   plugins: ['@typescript-eslint'],
   extends: [
@@ -32,6 +37,7 @@ const config = {
         fixStyle: 'inline-type-imports',
       },
     ],
+    '@typescript-eslint/await-thenable': 'off',
   },
 };
 
